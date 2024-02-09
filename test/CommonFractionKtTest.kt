@@ -15,6 +15,7 @@ class CommonFractionKtTest {
 
     @Test
     fun `test divide by zero`() {
+        var isCorrect = false
         try {
             CommonFraction(
                 numerator = 1,
@@ -22,7 +23,10 @@ class CommonFractionKtTest {
             )
         } catch (e: IllegalStateException){
             assertEquals(e.message, "Divide by zero")
+            isCorrect = true
         }
+
+        assertEquals(true, isCorrect)
     }
 
     //plus region
