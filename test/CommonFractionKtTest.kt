@@ -13,6 +13,18 @@ class CommonFractionKtTest {
         assertEquals(expected, actual.toString())
     }
 
+    @Test
+    fun `test divide by zero`() {
+        try {
+            CommonFraction(
+                numerator = 1,
+                denominator = 0
+            )
+        } catch (e: IllegalStateException){
+            assertEquals(e.message, "Divide by zero")
+        }
+    }
+
     //plus region
     @Test
     fun `test plus common denominators`() {
@@ -70,7 +82,7 @@ class CommonFractionKtTest {
 
         val expected = CommonFraction(
             numerator = 1,
-            denominator = 0
+            denominator = 1
         )
         val actual: CommonFraction = firstFraction.plus(secondFraction)
         assertEquals(expected, actual)
@@ -134,7 +146,7 @@ class CommonFractionKtTest {
 
         val expected = CommonFraction(
             numerator = 1,
-            denominator = 0
+            denominator = 1
         )
         val actual: CommonFraction = firstFraction.minus(secondFraction)
         assertEquals(expected, actual)
@@ -222,7 +234,7 @@ class CommonFractionKtTest {
 
         val expected = CommonFraction(
             numerator = 1,
-            denominator = 0
+            denominator = 1
         )
         val actual: CommonFraction = firstFraction.divide(secondFraction)
         assertEquals(expected, actual)
