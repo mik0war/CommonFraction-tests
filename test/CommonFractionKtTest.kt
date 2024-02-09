@@ -14,7 +14,6 @@ class CommonFractionKtTest {
     }
 
     //plus region
-
     @Test
     fun `test plus common denominators`() {
         val firstFraction = CommonFraction(
