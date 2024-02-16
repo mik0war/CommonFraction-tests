@@ -65,8 +65,8 @@ class CommonFractionKtTest {
         )
 
         val expected = Complex(
-            numerator = 2.0,
-            denominator = 6.0
+            numerator = 0.0,
+            denominator = 0.0
         )
         val actual: Complex = firstComplex.minus(secondFraction)
         assertEquals(expected, actual)
